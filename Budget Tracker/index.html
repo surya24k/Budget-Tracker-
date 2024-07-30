@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Add a new transaction:</h2>
+        </div>
+        <div class="form-container">
+            <div class="form-group1">
+                <label for="type">Type:</label>
+                <select id="type">
+                    <option value="">Choose one...</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+            <div class="form-group2">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group3">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount">
+            </div>
+            <button class="btn" onclick="addTransaction()">Add to transactions</button>
+        </div>
+        <table id="transactionTable">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Options</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function addTransaction() {
+            var type = document.getElementById("type").value;
+        }
+
+        function deleteTransaction(index) {
+            var table = document.getElementById("transactionTable");
+        }
+    </script>
+</body>
+</html>
